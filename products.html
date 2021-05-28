@@ -1,0 +1,24 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="products.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      {{ message }}
+
+      <h1>Products</h1>
+      <!-- <button v-on:click.stop.prevent="loadProducts()">Load Products</button> -->
+      <div>{{ products }}</div>
+
+      <div>
+        <input type="text" placeholder="name" v-model="newProduct.name" />
+        <button v-on:click="createProduct()">Create</button>
+      </div>
+    </div>
+  </body>
+</html>
